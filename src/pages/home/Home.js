@@ -50,8 +50,9 @@ const Home = () => {
       return () => clearInterval(interval);
     }, []);
 
-    const networkId = 1;
+    // const networkId = 1;
 
+    const networkId = 80001;
 
 
 
