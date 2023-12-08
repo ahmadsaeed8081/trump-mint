@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 
 
 
 
 .primary-btn{
-  @apply  bg-[#FED501] text-white text-[14px]  font-normal px-3 md:px-6 py-3 rounded-md
+  @apply  bg-[#FED501]  text-[18px] px-3 md:px-6 py-3 rounded-md 
 }

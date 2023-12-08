@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 body{
   background-color: #370A72 !important;
   /* background-image: url('./assets/images/bg.png'); */
-   
-  background-position: center;
- 
+  font-family: 'Courier Prime', monospace;  background-position: center;
+  font-weight: 700;
   background-size: cover;
 
 }

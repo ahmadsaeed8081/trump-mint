@@ -281,7 +281,7 @@ const Home = () => {
                 </div>
                 <div>
                     <h2 className=' text-gray-200 text-sm'>Price Per NFT</h2>
-                    <p className=' text-white font-normal'>{curr_price/10**18} ETH EACH</p>
+                    <p className=' text-white '>{curr_price/10**18} ETH EACH</p>
                 </div>
             </div>
 
@@ -300,7 +300,7 @@ const Home = () => {
 
             <div className=' my-4 sm:flex  block justify-between items-center border border-[#DB24FF] rounded-md p-3'>
                 <div>
-                   <h2 className=' text-white  font-normal' onClick={mint}> Mint Amount</h2>
+                   <h2 className=' text-white  ' onClick={mint}> Mint Amount</h2>
                 </div>
                 <div>
                     
@@ -321,7 +321,7 @@ const Home = () => {
 
             <div className=' my-4 flex justify-between items-center border border-[#DB24FF] rounded-md p-3'>
                 <div>
-                   <h2 className=' text-white font-normal'> Total Amount</h2>
+                   <h2 className=' text-white '> Total Amount</h2>
                 </div>
                 <div>
                     
