@@ -165,44 +165,45 @@ const Home = () => {
       console.log("object1");
       let supply = await contract.methods.totalSupply().call();
       let public_cost = await contract.methods.cost().call();
-      let presale_cost = await contract.methods.presaleCost().call();
-      let currentTime = await contract.methods.curr_time().call();  
-      let presaleTime = await contract.methods.presale_time().call();  
+      // let presale_cost = await contract.methods.presaleCost().call();
+      // let currentTime = await contract.methods.curr_time().call();  
+      // let presaleTime = await contract.methods.presale_time().call();  
       let paused = await contract.methods.paused().call();  
 
       let maxSupply = await contract.methods.maxSupply().call();
       set_paused(paused);
-      set_curr_time(currentTime);
-      set_presaleCost(presale_cost);
+      // set_curr_time(currentTime);
+      // set_presaleCost(presale_cost);
       // set_maxSupply(maxSupply);
       set_cost(public_cost)
-      set_presaleTime(presaleTime)
+      // set_presaleTime(presaleTime)
       set_balance(balance)
       set_supply(supply)
       set_maxSupply(maxSupply);
+      set_curr_price(public_cost)
 
-      if(!paused)
-      {
-        if(curr_time < presaleTime)
-        {
-          set_curr_price(presale_cost)
-        }
-        else
-        {
-          set_curr_price(public_cost)
-        }
+    //   if(!paused)
+    //   {
+    //     if(curr_time < presaleTime)
+    //     {
+    //       set_curr_price(presale_cost)
+    //     }
+    //     else
+    //     {
+    //       set_curr_price(public_cost)
+    //     }
 
-      }
-      else{
-        if(curr_time > presaleTime)
-        {
-          set_curr_price(presale_cost)
-        }
-        else{
-          set_curr_price(public_cost)
+    //   }
+    //   else{
+    //     if(curr_time > presaleTime)
+    //     {
+    //       set_curr_price(presale_cost)
+    //     }
+    //     else{
+    //       set_curr_price(public_cost)
   
-        }
-      }
+    //     }
+    //   }
 
     }
   function find_totalAmount(){
@@ -236,9 +237,13 @@ const Home = () => {
               <div className=' text-center  ' >
               <h2 className=' text-white text-xl  sm:text-3xl'>Minting Will Start Soon!</h2>
               </div>
-          ):(null)}
+          ):(
+            <div className=' text-center  ' >
+            <h2 className=' text-white text-xl  sm:text-3xl'>Public Sale is Live</h2>
+            </div>
+          )}
 
-          {curr_time<  presaleTime?(
+          {/* {curr_time<  presaleTime?(
             <>
            <div className=' text-center  ' >
            <h2 className=' text-white text-xl  sm:text-3xl'>LIMITED TIME PRE-SALE</h2>
@@ -266,13 +271,13 @@ const Home = () => {
           ):(
             null
 
-          )} 
+          )}  */}
 
-{!paused && curr_time>  presaleTime?(
+{/* {!paused && curr_time>  presaleTime?(
             <div className=' text-center  ' >
             <h2 className=' text-white text-xl  sm:text-3xl'>Public Sale </h2>
             </div>
-):(null)}
+):(null)} */}
 
 
 
